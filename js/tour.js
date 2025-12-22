@@ -2,7 +2,7 @@
 const tourData = {
     "france": {
         title: " Tour Khám Phá Paris Mộng Mơ ",
-        image: "../pictures/france.jpg",
+        image: "pictures/france.jpg",
         price: "15.900.000đ",
         date: "15/01/2026",
         start: "Sân bay Tân Sơn Nhất",
@@ -21,7 +21,7 @@ const tourData = {
     },
     "japan": {
         title: "Khám Phá Xứ Sở Hoa Anh Đào",
-        image: "../pictures/japan.jpg",
+        image: "pictures/japan.jpg",
         price: "22.500.000đ",
         date: "20/03/2026",
         start: "Sân bay Nội Bài",
@@ -40,7 +40,7 @@ const tourData = {
     },
     "halong": {
         title: "Vịnh Hạ Long Luxury",
-        image: "../pictures/vinhhalong.jpg",
+        image: "pictures/vinhhalong.jpg",
         price: "3.200.000đ",
         date: "Hàng ngày",
         start: "Cảng Tuần Châu",
