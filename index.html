@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tour du lịch World-Travel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold ms-auto" href="#">World Travel</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCustom">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCustom">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active fw-bold" href="#" onclick="clickNav(this, true)">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="#gioi-thieu" onclick="clickNav(this)">Giới thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="#combo-tour" onclick="clickNav(this)">Tour du lịch</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-bold" href="#lien-he" onclick="clickNav(this)">Liên hệ</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-light ms-lg-3" data-bs-toggle="modal" data-bs-target="#loginModal" id="navLoginBtn">
+              <i class="bi bi-person-fill"></i> Log in
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-primary ms-lg-3" data-bs-toggle="modal" data-bs-target="#Register" id="navRegisterBtn">
+              Register
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Đăng nhập -->
+  <div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Đăng Nhập</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="loginForm">
+            <div class="mb-3">
+              <label class="form-label">Tài khoản</label>
+              <input type="text" class="form-control" id="userTitle" placeholder="Nhập tên đăng nhập...">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mật khẩu</label>
+              <input type="password" class="form-control" placeholder="******">
+            </div>
+            <div class="mb-3 d-flex justify-content-between">
+            <a href="#" onclick="alert('Vui lòng gửi thông tin qua Worldtravel@gmail.com hoặc gọi hotline để được hỗ trợ')">Quên mật khẩu</a>
+            <a href="#Register" data-bs-toggle="modal" data-bs-dismiss="modal">Đăng ký ngay</a>
+            </div>
+            <button type="button" class="btn btn-info w-100 text-white fw-bold" onclick="giaLapDangNhap()">ĐĂNG
+              NHẬP</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Đăng ký -->
+  <div class="modal fade" id="Register" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold">Đăng Ký</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <form id="RegisterForm">
+            <div class="mb-3">
+              <label class="form-label">Tài khoản</label>
+              <input type="text" class="form-control" id="registerTitle" placeholder="Nhập tên đăng nhập...">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Gmail</label>
+              <input type="email" class="form-control" placeholder="*****@gmail">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Mật khẩu</label>
+              <input type="password" class="form-control" placeholder="******">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Nhập lại Mật khẩu</label>
+              <input type="password" class="form-control" placeholder="******">
+            </div>
+
+            <button type="button" class="btn btn-info w-100 text-white fw-bold" onclick="giaLapDangKy()">ĐĂNG
+              KÝ</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Hero -->
+  <section class="hero-section" id="trang-chu">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1 class="display-3 fw-bold mb-3">Chinh Phục Thế Giới</h1>
+          <h1 class="display-3 fw-bold mb-3">Theo Cách Riêng Của Bạn</h1>
+
+          <p class="lead mb-5 opacity-75">
+            Hãy để World Travel đồng hành cùng bạn trên mọi nẻo đường.
+          </p>
+
+          <div class="search-container">
+            <div class="search-box">
+              <div class="input-group">
+                <span class="input-group-text bg-white border-end-0">
+                  <i class="bi bi-search text-muted"></i>
+                </span>
+                <input type="text" id="searchInput" class="form-control" placeholder="Bạn muốn du lịch ở đâu..." />
+                <button class="btn btn-search" type="button" onclick="searchTour()">
+                  Tìm kiếm
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Giới thiệu -->
+  <section id="gioi-thieu" class="py-5 gioi-thieu">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="gioi-thieu-anh"></div>
+        </div>
+        <div class="col-lg-6 mt-4 mt-lg-0 text-start">
+          <h2 class="display-5 fw-bold mb-4">
+            Chúng tôi mang lại trải nghiệm tốt nhất
+          </h2>
+          <p>
+            "Mỗi hành trình là một câu chuyện, mỗi điểm đến là một chương mới
+            trong cuộc đời. Tại World Travel, chúng tôi không chỉ bán những
+            chuyến đi, chúng tôi kiến tạo những trải nghiệm sống động. Hãy để
+            chúng tôi cùng bạn viết nên những ký ức rực rỡ nhất trên hành
+            trình chinh phục những chân trời mới."
+          </p>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-info me-2"></i> Giá cả
+              cạnh tranh nhất thị trường
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-info me-2"></i> Hướng dẫn
+              viên chuyên nghiệp
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-check-circle-fill text-info me-2"></i> Hỗ trợ
+              khách hàng 24/7
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Combo-Tour -->
+  <section id="combo-tour" class="py-5">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold display-5">Gói Combo Hot Nhất</h2>
+        <p class="fw-bold">
+          Tiết kiệm hơn với các gói du lịch trọn gói của chúng tôi
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm tour-card">
+            <img src="pictures/france.jpg" class="card-img-top" alt="Paris" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Combo Paris Mộng Mơ</h5>
+              <p class="card-text text-muted small">
+                5 ngày 4 đêm - Khách sạn 4 sao - Vé máy bay khứ hồi.
+              </p>
+              <h4 class="text-info fw-bold">15.900.000đ</h4>
+              <a href="tour.html?id=france" class="btn btn-info w-100 mt-3">Tìm hiểu thêm</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm tour-card">
+            <img src="../pictures/japan.jpg" class="card-img-top" alt="Japan" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Khám phá Nhật Bản</h5>
+              <p class="card-text text-muted small">
+                Mùa hoa anh đào - Trải nghiệm văn hóa đặc sắc.
+              </p>
+              <h4 class="text-info fw-bold">22.500.000đ</h4>
+              <a href="tour.html?id=japan" class="btn btn-info w-100 mt-3">Tìm hiểu thêm</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm tour-card">
+            <img src="pictures/vinhhalong.jpg" class="card-img-top" alt="VinhHaLOng" />
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Vịnh Hạ Long Luxury</h5>
+              <p class="card-text text-muted small">
+                Du thuyền 5 sao - Ăn tối giữa kỳ quan thiên nhiên.
+              </p>
+              <h4 class="text-info fw-bold">3.200.000đ</h4>
+              <a href="tour.html?id=halong" class="btn btn-info w-100 mt-3">Tìm hiểu thêm</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Liên Hệ -->
+  <section id="lien-he" class="py-5">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 shadow p-5 rounded-4 bg-white">
+          <div class="text-center mb-4">
+            <h2 class="fw-bold display-5">Liên hệ</h2>
+            <p>Chúng tôi sẽ phản hồi bạn thắc mắc của bạn trong vòng 24h</p>
+          </div>
+          <form>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Họ và tên..." required />
+              </div>
+              <div class="col-md-6">
+                <input type="email" class="form-control" placeholder="Email của bạn..." required />
+              </div>
+              <div class="col-12">
+                <input type="text" class="form-control" placeholder="Số điện thoại..." />
+              </div>
+              <div class="col-12">
+                <textarea class="form-control" rows="5" placeholder="Nội dung lời nhắn..."></textarea>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-info px-5 fw-bold text-white py-2">
+                  Gửi ngay <i class="bi bi-check-circle-fill"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <footer class="bg-dark text-white py-3 d-flex justify-content-center">
+    <p class="mb-0 small text-center fw-bold">Copyright &copy; 2025 World Travel. All rights reserved. |
+      <i class="bi bi-headset text-white"></i> Hotline: 088889999. 
+      <br>
+      <i class="bi bi-facebook mx-2 fs-2"></i>
+      <i class="bi bi-instagram mx-2 fs-2"></i>
+      <i class="bi bi-twitter mx-2 fs-2 " ></i>
+     
+    </p>
+
+
+  
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/tour.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi tiết Tour - World Travel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold ms-auto" href="index.html">World Travel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCustom">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCustom">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link fw-bold" href="index.html">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold" href="index.html#combo-tour">Tour du lịch</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 bg-white p-4 shadow-sm rounded-4">
+        
+        <h1 id="tour-title" class="display-4 fw-bold text-info mb-4 ">Tour Khám Phá Paris Mộng Mơ</h1>
+        <hr>
+
+        <div class="mb-5">
+          <img  id="tour-img" src="pictures/france.jpg" class="img-fluid rounded-4 shadow w-100" alt="Paris" style="max-height: 500px; object-fit: cover;">
+        </div>
+
+        <div class="row mb-5 bg-light p-4 rounded-3 border">
+          <div class="col-md-4 mb-3 mb-md-0 text-center border-end">
+            <i class="bi bi-calendar-check display-6 text-info"></i>
+            <h5 class="mt-2 fw-bold">Khởi hành</h5>
+            <p id="tour-date" class="text-muted">15/01/2026</p>
+          </div>
+          <div class="col-md-4 mb-3 mb-md-0 text-center border-end">
+            <i class="bi bi-geo-alt display-6 text-info"></i>
+            <h5 class="mt-2 fw-bold">Điểm đi</h5>
+            <p id="tour-start" class="text-muted">Sân bay Tân Sơn Nhất</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <i class="bi bi-clock display-6 text-info"></i>
+            <h5 class="mt-2 fw-bold">Thời gian</h5>
+            <p id="tour-duration" class="text-muted">5 Ngày 4 Đêm</p>
+          </div>
+        </div>
+
+        <div class="trai-nghiem-tour">
+          <h2 class="fw-bold mb-4 border-start border-info border-4 ps-3">Chi tiết trải nghiệm</h2>
+          <p id="tour-desc" class="lead">Hành trình khám phá "Kinh đô ánh sáng" sẽ mang đến cho bạn những cảm xúc khó quên với những điểm đến biểu tượng.</p>
+          
+          <ul id="tour-exp" class="list-group list-group-flush mt-4">
+            <li class="list-group-item py-3">
+              <h5 class="fw-bold"><i class="bi bi-camera-fill text-info me-2"></i> Thăm tháp Eiffel & Bảo tàng Louvre</h5>
+              <p class="mb-0">Chiêm ngưỡng kiến trúc vĩ đại và những tác phẩm nghệ thuật kinh điển thế giới.</p>
+            </li>
+            <li class="list-group-item py-3">
+              <h5 class="fw-bold"><i class="bi bi-cup-hot-fill text-info me-2"></i> Trải nghiệm văn hóa Cafe vỉa hè</h5>
+              <p class="mb-0">Thưởng thức Croissant và cafe tại các quán nhỏ ven đường phong cách Pháp.</p>
+            </li>
+            <li class="list-group-item py-3">
+              <h5 class="fw-bold"><i class="bi bi-water text-info me-2"></i> Du thuyền trên sông Seine</h5>
+              <p class="mb-0">Ngắm nhìn toàn cảnh thành phố lung linh khi lên đèn từ lòng sông thơ mộng.</p>
+            </li>
+          </ul>
+
+          <div class="mt-5 text-center">
+            <h3 id="tour-price" class="fw-bold text-danger mb-4">Giá tour: 15.900.000đ</h3>
+            <a href="payment.html" class="btn btn-info btn-lg px-5 text-white fw-bold">ĐẶT TOUR VÀ THANH TOÁN NGAY</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white py-3 mt-5">
+    <p class="mb-0 small text-center fw-bold">Copyright &copy; 2025 World Travel. All rights reserved.
+      <i class="bi bi-headset text-white"></i> Hotline: 088889999.
+    </p>
+  </footer>
+
+  <script src="js/script.js"></script> 
+  <script src="js/tour.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
