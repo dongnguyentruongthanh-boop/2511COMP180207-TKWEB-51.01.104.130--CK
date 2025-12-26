@@ -4,7 +4,7 @@ function hienThiTrangChu(status) {
     var displayBlock = status ? 'block' : 'none';
     var displayPayment = status ? 'none' : 'block';
 
-    // Dùng ?. (optional chaining) hoặc check if để không bị lỗi nếu element không có
+  
     if(document.querySelector('.hero-section')) document.querySelector('.hero-section').style.display = displayHome;
     if(document.getElementById('gioi-thieu')) document.getElementById('gioi-thieu').style.display = displayHome;
     if(document.getElementById('combo-tour')) document.getElementById('combo-tour').style.display = displayBlock;
